@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Qgen App</title>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/global.css">
+
+</head>
+<body>
+  <div id="login-form">
+    <h2>Create New User</h2>
+    <form id="create-user" autocomplete="off">
+      Username:<br>
+      <input id="username-create" type="text" name="username">
+      <br><br>
+      <input type="submit" name="Create User and Login">
+    </form>
+    <h2>Login as Existing User</h2>
+    <form id="login-user" autocomplete="off">
+      Username:<br>
+      <input id="username-login" type="text" name="username">
+      <br><br>
+      <input type="submit" name="Login">
+    </form> 
+  </div>
+  <div id="logged-in">
+    <p>You are now logged in as <span id="username"></span></p>
+    <p>You have completed <span id="num-completed"></span> question(s) out of <span id="num-questions"></span>.</p>
+    <p>Current Question Number: <span id="current-question-number"></span></p>
+    <button id="Qgen-button" type="button">Generate Random Question Number</button>
+    <br><br>
+    <p id="current-rate">Current Rate of Completion: <span id="completion-rate"></span> questions per day</p>
+    <p>Questions Completed: <span id="questions-completed"></span></p>
+    <form id="manual-answer" autocomplete="off">
+      Mark Specific Question as Answered:<br>
+      <input id="answer-question-number" type="text" name="answer-question-number">
+      <br>
+      <input type="submit" name="manual-answer">
+    </form>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
